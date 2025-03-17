@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.login-signup-container {
+  background-image: url('../assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.law-title {
+  font-family: 'Playfair Display', serif;
+  color: #5D4037; /* Dark Brown */
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title-section p {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  flex-grow: 1;
+  max-height: 600px;
+}
+
+.auth-section {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.auth-section h2 {
+  color: #5D4037;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.divider-line {
+  width: 1px;
+  height: 100px;
+  background-color: #ccc;
+  flex-grow: 1;
+}
+
+.divider span {
+  padding: 10px 0;
+  color: #777;
+  font-weight: bold;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #5D4037;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remember-me label {
+  margin-left: 5px;
+}
+
+.forgot-password {
+  color: #5D4037;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.auth-button {
+  background-color: #5D4037;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #4E342E;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.terms input {
+  margin-top: 3px;
+  margin-right: 6px;
+}
+
+.terms a {
+  color: #5D4037;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+  .auth-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    max-height: none;
+  }
+  
+  .divider {
+    flex-direction: row;
+    padding: 10px 0;
+  }
+  
+  .divider-line {
+    width: 100px;
+    height: 1px;
+  }
+  
+  .divider span {
+    padding: 0 10px;
+  }
+  
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo {
+    margin-right: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .law-title {
+    font-size: 2.5rem;
+  }
+  
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .forgot-password {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .law-title {
+    font-size: 2rem;
+  }
+  
+  .title-section p {
+    font-size: 1rem;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  .auth-section {
+    padding: 20px 15px;
+  }
+  
+  .auth-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  
+  .auth-button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .terms {
+    font-size: 0.8rem;
+  }
+}

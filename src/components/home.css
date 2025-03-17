@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.home-container {
+  background-image: url('../assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #4b0f0f;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.logo {
+  height: 400px; /* Further increased logo size */
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.law-title {
+  font-family: 'Playfair Display', serif;
+  color: #5D4037;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  text-align: center;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.description-section {
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.explore-button {
+  background-color: #5D4037;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #4E342E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .logo {
+    height: 350px;
+  }
+  .law-title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    height: 300px;
+  }
+  .law-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    height: 250px;
+  }
+  .law-title {
+    font-size: 2rem;
+  }
+}
