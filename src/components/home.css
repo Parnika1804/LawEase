@@ -1,187 +1,517 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #8b7d65;        /* Warm taupe */
+  --primary-dark: #665c4a;   /* Darker taupe */
+  --accent: #b59d69;         /* Muted gold */
+  --bg-light: #f8f7f4;       /* Cream background */
+  --bg-white: #ffffff;       /* White background */
+  --bg-dark: #231f1e;        /* Dark brown/black */
+  --text-dark: #231f1e;      /* Dark text */
+  --text-medium: #5a5a5a;    /* Medium text */
+  --text-light: #f8f7f4;     /* Light text for dark backgrounds */
+  --border-light: #e5e1d9;   /* Light border */
+  --nav-height: 80px;        /* Navbar height */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-medium);
+  line-height: 1.6;
+  background-color: var(--bg-light);
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
 /* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  padding: 0 5%;
+  background-color: var(--bg-white);
+  height: var(--nav-height);
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  max-width: 100%; /* Ensure it doesn't overflow */
-  overflow: hidden;
+  border-bottom: 1px solid var(--border-light);
 }
 
-.nav-logo {
-  font-family: 'Playfair Display', serif;
+.logo {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
-  color: #5D4037;
-  text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  color: var(--text-dark);
 }
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 2.5rem;
 }
 
 .nav-item {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-medium);
   transition: color 0.3s ease;
-  cursor: pointer;
+  font-weight: 500;
 }
 
 .nav-item:hover {
-  color: #8B5E3C;
+  color: var(--primary);
 }
 
-/* Home Container Styles */
-.home-container {
-  text-align: center;
-  padding: 20px;
-  margin: 0 auto;
-  width: 100%; /* Ensure full width */
-  max-width: 100%; /* Remove any width constraints */
-  background-image: url('../assets/bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; /* Prevent tiling */
-  min-height: 100vh;
-  color: #4b0f0f;
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.logo {
-  max-height: 50px; /* Adjust logo size */
-  width: auto;
-  margin-bottom: 20px;
-}
-
-.law-title {
-  font-family: 'Playfair Display', serif;
-  color: #5D4037;
-  font-size: 3rem; 
-  word-wrap: break-word; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  margin: 0;
-  text-align: left; 
-  margin-left: 20px; 
-}
-
-.description-section {
-  max-width: 800px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 80px auto 20px;
-  text-align: center;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.explore-button {
-  background-color: #5D4037;
-  color: white;
+.cta-button {
+  background-color: var(--accent);
+  color: var(--bg-white);
+  padding: 0.6rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   border: none;
-  padding: 12px 30px;
-  font-size: 1.1rem;
-  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-.explore-button:hover {
-  background-color: #4E342E;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+.cta-button:hover {
+  background-color: var(--primary-dark);
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+/* Hero Section */
+.hero-section {
+  padding-top: var(--nav-height);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-light);
+  position: relative;
+}
+
+.hero-content {
+  max-width: 900px;
+  padding: 4rem 2rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: var(--text-medium);
+}
+
+.hero-image {
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+/* Services Section */
+.services-section {
+  padding: 5rem 0;
+  background-color: var(--bg-white);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background-color: var(--accent);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+}
+
+/* Attorneys Section */
+.attorneys-section {
+  padding: 5rem 0;
+  background-color: var(--bg-light);
+}
+
+.attorneys-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.attorney-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.attorney-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.attorney-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.attorney-description {
+  margin-bottom: 2rem;
+}
+
+.learn-more {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.learn-more:after {
+  content: '→';
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.learn-more:hover:after {
+  transform: translateX(5px);
+}
+
+.attorney-image {
+  position: relative;
+}
+
+.attorney-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stat-badge {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.badge-top {
+  top: 10%;
+  right: -40px;
+}
+
+.badge-bottom {
+  bottom: 10%;
+  right: -40px;
+}
+
+.stat-number {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: var(--text-medium);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 5rem 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefits-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.benefits-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.benefits-list {
+  margin-bottom: 2rem;
+}
+
+.benefit-item {
+  margin-bottom: 1.5rem;
+}
+
+.benefit-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.benefit-description {
+  font-size: 0.9rem;
+  color: rgba(248, 247, 244, 0.8);
+}
+
+.find-attorney-btn {
+  background-color: var(--accent);
+  color: var(--text-dark);
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.find-attorney-btn:hover {
+  background-color: var(--bg-white);
+}
+
+.benefits-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-img {
+  max-width: 100%;
+  height: auto;
+  transform: rotate(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 0;
+  background-color: var(--bg-light);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-arrow {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.contact-email {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+  display: block;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  background-color: transparent;
+  border: 1px solid var(--text-dark);
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-white);
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid var(--border-light);
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-link {
+  font-size: 0.8rem;
+  color: var(--text-medium);
+}
+
+.footer-credits {
+  font-size: 0.7rem;
+  color: var(--text-medium);
 }
 
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
-  .logo {
-    height: 350px;
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .law-title {
+  
+  .attorneys-grid, 
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero-title {
     font-size: 3rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .nav-links {
-    flex-direction: column;
-    gap: 10px;
+    display: none;
   }
-
-  .home-container {
-    padding: 10px;
-  }
-
-  .law-title {
+  
+  .mobile-menu-btn {
+    display: block;
     font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    cursor: pointer;
   }
-
-  .logo {
-    height: 300px;
+  
+  .services-grid {
+    grid-template-columns: 1fr;
   }
-  .law-title {
+  
+  .hero-title {
     font-size: 2.5rem;
   }
-  .nav-links {
-    gap: 10px;
+  
+  .contact-title {
+    font-size: 2.2rem;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .logo {
-    height: 250px;
-  }
-  .law-title {
-    font-size: 2rem;
-  }
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  .nav-links {
-    flex-direction: column;
-    text-align: center;
-    gap: 5px;
+  
+  .contact-email {
+    font-size: 1.2rem;
   }
 }

@@ -1,0 +1,11 @@
+/* Add your global or component-specific styles here */
+
+/* Example styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
