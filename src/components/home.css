@@ -2,17 +2,17 @@
 
 /* Navbar Styles */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
   z-index: 1000;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  overflow: hidden;
 }
 
 .nav-logo {
@@ -25,13 +25,14 @@
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .nav-item {
   text-decoration: none;
-  color: #4b0f0f;
+  color: #333;
   font-weight: bold;
+  white-space: nowrap; /* Prevent text wrapping */
   transition: color 0.3s ease;
   cursor: pointer;
 }
@@ -42,18 +43,22 @@
 
 /* Home Container Styles */
 .home-container {
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%; /* Ensure full width */
+  max-width: 100%; /* Remove any width constraints */
   background-image: url('../assets/bg.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat; /* Prevent tiling */
   min-height: 100vh;
-  padding: 100px 20px 20px; /* Adjusted padding to account for navbar */
   color: #4b0f0f;
   font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 .header {
@@ -66,7 +71,7 @@
 }
 
 .logo {
-  height: 400px;
+  max-height: 50px; /* Adjust logo size */
   width: auto;
   margin-bottom: 20px;
 }
@@ -74,10 +79,12 @@
 .law-title {
   font-family: 'Playfair Display', serif;
   color: #5D4037;
-  font-size: 3.5rem;
+  font-size: 3rem; 
+  word-wrap: break-word; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin: 0;
-  text-align: center;
+  text-align: left; 
+  margin-left: 20px; 
 }
 
 .description-section {
@@ -131,6 +138,24 @@ html {
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-container {
+    padding: 10px;
+  }
+
+  .law-title {
+    font-size: 1.5rem;
+  }
+
   .logo {
     height: 300px;
   }
