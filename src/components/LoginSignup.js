@@ -8,7 +8,7 @@ const LoginSignup = () => {
     <div
       className="login-signup-container"
       style={{
-        backgroundImage: `url(${bg})`,
+        
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
