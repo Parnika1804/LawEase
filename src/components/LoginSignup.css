@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 .login-signup-container {
-  background-image: url('../assets/bg.png');
+  
   background-size: cover;
   background-position: center;
   min-height: 100vh;
